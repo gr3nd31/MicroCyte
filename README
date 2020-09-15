@@ -1,0 +1,26 @@
+Welcome to the Microcytometry Package developed by Jason Needham out of the University of Alabama at Birmingham (2020)
+
+Steps to use this package:
+
+1) *Fill out schema.csv*
+
+2) *Run dirgen.sh.* This will automatically generate the appropriate subdirectories for you to add your images.
+
+3) *Add images to the appropriate subdirectories.* They should be TIFs, and labeled either by their target, or using the default "1_CH#.tif" convention given by the Keyence microscope.
+
+3b) *Run purgo.sh.* This will generate TIFs/PNGs from the images and correct for spectral overlap, if necessary. Can be run in manual (corrects between two images given by in the arguments), auto (corrects between CH3 and CH4), and full (sequentially corrects between CH1 through CH4) modes.
+
+3c) *Run rename.sh.* If the images are using the default Keyence "1_CH#.tif" convention, use rename.sh to change names to the targets specified in the schema.csv file.
+
+4) *Run YggData_multi ImageJ macro to extract image information.*
+
+5) *Run imagen.sh.*
+
+6) *Run initial processing, normalize, and combine datasets using oad.sh.* (OPTIONAL)
+
+7) *Analyze data using SirMixaplot.R functions in Rstudio -OR- any Flow Cytometry software that will take a csv input.*
+
+
+I hope this makes your life easier and generates lots of data!
+
+-Jason
