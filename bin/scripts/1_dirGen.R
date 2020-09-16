@@ -5,6 +5,16 @@ args = commandArgs(trailingOnly=TRUE)
 
 # here's the actual function to automatically generate the directories based on the schema file
 dirGen <- function(idType="name"){
+  #First, lets generate the appropriate folders
+  dirList <- list.files("../../")
+  if(!"files" %in% dirList){
+    dir.create("../../files")
+  } else if(!"figures" %in% dirList){
+    dir.create("../../figures")
+  }if(!"data" %in% dirList){
+    dir.create("../../data")
+  }
+  
   #reads the schema file
   schema <- read.csv("../../schema.csv")
   # if the passed argument is "number", the notebookID is used, otherwise a descriptive name is generated from the optional data tags
