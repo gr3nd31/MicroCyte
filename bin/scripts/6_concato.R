@@ -65,3 +65,5 @@ concato <- function(dirz = "../files",
     cat(paste0("The minimum cell count recorded is: ",minNum))
   }
 }
+
+concato()
