@@ -24,7 +24,7 @@ input=File.getParent(input);
 //input=y;
 pList=getFileList(input);
 for (i=0; i < pList.length; i++){
-	print(pList[i]);
+	//print(pList[i]);
 	if(!endsWith(pList[i], ".ijm")){
 		dList=getFileList(input+"/"+pList[i]);
 		for (j=0; j < dList.length; j++){
