@@ -1,7 +1,7 @@
-#!/usr/bin/Rscript
-
-#This assigns the arguments
-args = commandArgs(trailingOnly=TRUE)
+# #!/usr/bin/Rscript
+# 
+# #This assigns the arguments
+# args = commandArgs(trailingOnly=TRUE)
 
 # here's the actual function to automatically generate the directories based on the schema file
 dirGen <- function(idType="name"){
@@ -41,11 +41,5 @@ dirGen <- function(idType="name"){
   }
 }
 
-
-# # test if there is at least one argument and uses the first one: if not, it defaults to the "name" argument
-# if (length(args)==0) {
-#   IDType <- "name"
-#   dirGen(IDType)
-# } else if (length(args)>0) {
-#   dirGen(idType = args[1])
-# }
+runType <- readline(prompt = "Generating directories. Should this be done by name or number (default - name): ")
+dirGen(idType = runType)
