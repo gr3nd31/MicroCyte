@@ -247,7 +247,7 @@ imaGen <- function(directory="./", colorz = T, label_ids = T){
   write.csv(cells, file = paste0("../",filnam, "_WN_all.csv"), row.names = F)
 }
 
-setwd("../../files/")
+#setwd("../../files/")
 xList <- list.files()
 for (xL in xList){
   if (!grepl("ijm", xL)){
