@@ -9,9 +9,11 @@ dirGen <- function(idType="name"){
   dirList <- list.files("../../")
   if(!"files" %in% dirList){
     dir.create("../../files")
-  } else if(!"figures" %in% dirList){
+  }
+  if(!"figures" %in% dirList){
     dir.create("../../figures")
-  }if(!"data" %in% dirList){
+  }
+  if(!"data" %in% dirList){
     dir.create("../../data")
   }
   
