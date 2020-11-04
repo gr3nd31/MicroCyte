@@ -58,6 +58,6 @@ unite <- function(dirz = "../files",
       setwd("../")
     }
   }
-  write.csv(cells, file = paste0("../data/",filename, "_all.csv"), row.names = F)
+  write.csv(cells, file = paste0("../data/",filename, "_all_cells.csv"), row.names = F)
   write.csv(rois, file = paste0("../data/",filename, "_roi_all.csv"), row.names = F)
 }
