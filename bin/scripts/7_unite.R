@@ -1,11 +1,13 @@
 #!/usr/bin/Rscript
 
-unite <- function(dirz = "./", 
+unite <- function(dirz = "../files", 
                   full = T,
                   filename = "Experiment",
                   sampleSize = 1000){
   if(exists("cells")){
     rm(cells)
+  }
+  if(exists("rois")){
     rm(rois)
   }
   setwd(dirz)
