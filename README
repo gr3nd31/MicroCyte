@@ -1,4 +1,4 @@
-Welcome to the Microcytometry Package developed by Jason Needham out of the University of Alabama at Birmingham (2020)
+Welcome to the Microcytometry workflow developed by Jason Needham out of the University of Alabama at Birmingham (2020)
 
 Steps to use this package:
 0) *Install dependencies* These can be done by running the "0_setup.R" script.
