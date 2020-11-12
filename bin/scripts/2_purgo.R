@@ -71,6 +71,8 @@ alakazam <- function(df = "QC/sampledPixels.csv",
   
   ticky <- match(paste0("X",overlapper), names(dato))
   ricky <- match(paste0("X",overlappee) , names(dato))
+  print(ticky)
+  print(ricky)
   
   dato <- split(dato, cut(dato[,ticky], breaks = breck))
   for (i in dato[1:4]){
@@ -180,7 +182,7 @@ alakazam <- function(df = "QC/sampledPixels.csv",
        abra()
        kadabra()
        if(runType == "auto"){
-         alakazam()
+         #alakazam()
        } else if (runType == "manual"){
          alakazam(overlapper = args[2], overlappee = args[3])
        } else if (runType == "full"){
