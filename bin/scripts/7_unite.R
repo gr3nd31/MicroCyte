@@ -1,13 +1,11 @@
 #!/usr/bin/Rscript
 
-unite <- function(dirz = "../files", 
+unite <- function(dirz = "./", 
                   full = T,
                   filename = "Experiment",
                   sampleSize = 1000){
   if(exists("cells")){
     rm(cells)
-  }
-  if(exists("rois")){
     rm(rois)
   }
   setwd(dirz)
@@ -58,6 +56,10 @@ unite <- function(dirz = "../files",
       setwd("../")
     }
   }
-  write.csv(cells, file = paste0("../data/",filename, "_all_cells.csv"), row.names = F)
+  if("log2_dna" %in% names(cells)){
+    write.csv(cells, file = paste0("../data/",filename, "_all_cells.csv"), row.names = F)
+  } else{
+    write.csv(cells, file = paste0("../data/",filename, "_all.csv"), row.names = F)
+  }
   write.csv(rois, file = paste0("../data/",filename, "_roi_all.csv"), row.names = F)
 }
