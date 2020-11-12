@@ -42,7 +42,7 @@ for (i=0; i < pList.length; i++){
 // If you are running a high magnification (>10x) DNA image, it is recommended that you comment this out to avoid nuclear image fragementation
 			run("Watershed");
 //The ROIs are generated
-			run("Analyze Particles...", "size=55-200 add");
+			run("Analyze Particles...", "size=30-333 add include exclude");
 //The image is closed
 			close();
 // Then a Nuclear and WholeCell directory is made, if not already present
@@ -83,9 +83,9 @@ for (i=0; i < pList.length; i++){
 						setOption("BlackBackground", false);
 						run("Convert to Mask");
 						run("Watershed");
-						run("Analyze Particles...", "size=15-200 include add");
-					} else if (startsWith(iList[k], "n")){
-						setThreshold(20, 255);
+						run("Analyze Particles...", "size=30-333 include add exclude");
+					} else if (startsWith(iList[k], "mcm4")){
+						setThreshold(16, 255);
 						setOption("BlackBackground", false);
 						run("Convert to Mask");
 						run("Watershed");
@@ -95,8 +95,8 @@ for (i=0; i < pList.length; i++){
 						setOption("BlackBackground", false);
 						run("Convert to Mask");
 						run("Watershed");
-						run("Analyze Particles...", "size=5-200 include add");
-					} else if (startsWith(iList[k], "yh2ax")){
+						run("Analyze Particles...", "size=20-333 include add");
+					} else if (startsWith(iList[k], "cyclinD")){
 						setThreshold(20, 255);
 						setOption("BlackBackground", false);
 						run("Convert to Mask");
